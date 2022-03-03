@@ -1,0 +1,328 @@
+body{
+  background: url(/src/assets/img/wave.svg) no-repeat top/100%, url(/src/assets/img/pattern.png) repeat;
+}
+
+::placeholder {
+  color: #a03400;
+  opacity: 1; /* Firefox */
+}
+
+#container {
+  width: 58%;
+  margin: auto;
+}
+
+.red-line{
+  position: absolute;
+  width:calc(50% - 225px);
+  height:1px;
+  border-width:0;color:
+  #e43636;
+  background-color:#e43636
+}
+
+.red-line-right{
+  margin-top: -10px;
+  right: 0px;
+}
+
+.red-line-left{
+  margin-top: 10px;
+  left: 0px;
+}
+
+.simple-btn{
+  height: 55px;
+  font-size: 18px;
+  font-weight: bold;
+  width: 190px;
+  border-radius: 25px;
+  border: none;
+  color: #fff;
+  background-color: #e43636;
+  margin-right: 15px;
+}
+
+.simple-btn:hover{
+  cursor: pointer;
+}
+
+.simple-btn--altcolor{
+  color: #a03400;
+  background-color: #ffca00;
+  margin-left: 15px;
+}
+
+.error-text{
+    color: red;
+}
+
+.w1{
+  width: 10%;
+}
+.w2{
+  width: 20%;
+}
+.w3{
+  width: 30%;
+}
+.w4{
+  width: 40%;
+}
+.w5{
+  width: 50%;
+}
+.w6{
+  width: 60%;
+}
+.w7{
+  width: 70%;
+}
+.w8{
+  width: 80%;
+}
+.w9{
+  width: 90%;
+}
+.w10{
+  width: 100%;
+}
+.d-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.basic-input{
+  width: calc(100% - 25px);
+  height: 28px;
+  color: #a03400;
+  padding-left: 15px;
+  border: 1px solid #a03400;
+  border-radius: 7px;
+  outline: none;
+  margin-bottom: 15px;
+  float: left;
+}
+
+.image-input{
+  height: 100px;
+}
+
+.preview-img{
+  margin-top: 15px;
+  width: 50px;
+  height: 50px;
+}
+
+.descricao-input{
+  height: 84px;
+  resize: none;
+  padding-top: 7px;
+  font-family: sans-serif;
+}
+
+.title-text{
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  color: #a03400;
+  margin-bottom: 0px;
+}
+
+.type-text{
+  font-size: 16px;
+  color: #a03400;
+}
+
+.cell{
+  width: 100%;
+  margin: auto;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px 4px rgba(233, 91, 91, 0.2);
+}
+
+.switch-div{
+  padding-top: 6px;
+  justify-content: right;
+}
+
+#form-title{
+  width: 100%;
+  background-color: #ffca00;
+  border-radius: 15px 15px 0px 0px;
+  text-align: left;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-bottom: -15px;
+  display: flex;
+}
+
+#form-inputs{
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 25px;
+}
+
+#form-buttons{
+  margin-top: -25px;
+  margin-bottom: 70px;
+}
+
+#logo{
+  width: 65%;
+  margin-right: 17%;
+  margin-bottom: 20px;
+}
+
+#pastel-paralax{
+  pointer-events: none;
+  position: absolute;
+  width: 30%;
+  top: 0%;
+  left: 4%;
+  z-index: 2;
+}
+
+#pasteis{
+  position: absolute;
+  width: 20%;
+  top: 21%;
+  right: 18%;
+  z-index: -1;
+}
+
+/*Slider Components*/
+.switch {
+  margin-top: 20px;
+  margin: 20px 10px 0 10px;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 0px;
+  bottom: -4px;
+  background-color: #e33535;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/*****************/
+
+@media screen and (max-width: 1600px)
+{
+  #pastel-paralax{
+    width: 25%;
+    top: 10%;
+    left: 1%;
+  }
+
+  #container {
+    width: 70%;
+  }
+}
+
+
+@media screen and (max-width: 1200px)
+{
+  #container {
+    width: 80%;
+  }
+
+  #pastel-paralax{
+    width: 20%;
+    top: 19%;
+    left: 0%;
+  }
+
+  #pasteis{
+    width: 18%;
+    top: 21%;
+    right: 15%;
+  }
+}
+
+@media screen and (max-width: 900px)
+{
+  #pastel-paralax{
+    display: none;
+  }
+
+  #pasteis{
+    display: none;
+  }
+
+  .small-w1{
+    width: 20%;
+  }
+  .small-w2{
+    width: 40%;
+  }
+  .small-w3{
+    width: 60%;
+  }
+  .small-w4{
+    width: 80%;
+  }
+  .small-w5{
+    width: 100%;
+  }
+
+  #container {
+    width: 100%;
+  }
+
+  #app {
+    margin-top: 3vh!important;
+  }
+  /*.left, .main, .right {
+    width: 100%; The width is 100%, when the viewport is 800px or smaller
+  }*/
+}
