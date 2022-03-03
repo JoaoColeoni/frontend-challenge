@@ -141,7 +141,7 @@ export default {
       for (var i = this.registros.length; i > 0; i--)
       {
         if(this.registros[i - 1].bebida == this.bebida
-           && (this.registros[i - 1].titulo_pedido.match(this.filtro) || this.registros[i - 1].sabor.match(this.filtro) || this.registros[i - 1].descricao.match(this.filtro))
+           && (this.registros[i - 1].titulo_pedido.toUpperCase().match(this.filtro.toUpperCase()) || this.registros[i - 1].sabor.toUpperCase().match(this.filtro.toUpperCase()) || this.registros[i - 1].descricao.toUpperCase().match(this.filtro.toUpperCase()))
         )
           AuxRegistros.push(this.registros[i - 1]);
       }
