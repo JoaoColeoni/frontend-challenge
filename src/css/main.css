@@ -53,6 +53,12 @@ body{
   margin-left: 15px;
 }
 
+.simple-btn--black{
+  color: #fff;
+  background-color: #000;
+  margin-left: 15px;
+}
+
 .error-text{
     color: red;
 }

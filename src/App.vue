@@ -44,6 +44,7 @@
     <div id="form-buttons">
       <button class="simple-btn" type="button" v-on:click="clearForm()">LIMPAR</button>
       <button class="simple-btn simple-btn--altcolor" type="button" v-on:click="saveForm()">CADASTRAR</button>
+      <button class="simple-btn simple-btn--black" type="button" v-on:click="loadMock()">LOAD MOCK</button>
       <h1 v-if="error != ''" class="error-text">{{error}}</h1>
     </div>
     <!--Tabela-->
@@ -70,6 +71,7 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import TableInfo from './components/TableInfo.vue'
+import axios from 'axios'
 
 export default {
   name: 'App',
@@ -132,6 +134,37 @@ export default {
         }
       );
       this.clearForm();
+    },
+    loadMock(){
+      axios.get('https://62223129666291106a1fdfd3.mockapi.io/api/v1/Product').then(response => {
+        for (var i = 0; i < response.data.length; i++) {
+          var bebida = false;
+
+          if(i < 5)
+            bebida = true;
+
+          this.registros.push(
+            {
+              "titulo_pedido": response.data[i].titulo,
+              "sabor": response.data[i].sabor,
+              "valor": response.data[i].valor,
+              "descricao": response.data[i].descricao,
+              "image": response.data[i].image,
+              "bebida": bebida
+            }
+          );
+        }
+      });
+      // this.registros.push(
+      //   {
+      //     "titulo_pedido": this.formulario.titulo_pedido,
+      //     "sabor": this.formulario.sabor,
+      //     "valor": this.formulario.valor,
+      //     "descricao": this.formulario.descricao,
+      //     "image": this.formulario.image,
+      //     "bebida": this.bebida
+      //   }
+      // );
     }
   },
   computed: {
